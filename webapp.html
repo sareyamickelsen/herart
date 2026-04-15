@@ -270,4 +270,163 @@
       <button class="answer-btn" onclick="checkAnswer(0)"></button>
       <button class="answer-btn" onclick="checkAnswer(1)"></button>
       <button class="answer-btn" onclick="checkAnswer(2)"></button>
-      <button class="answer-btn" onclick=
+      <button class="answer-btn" onclick="checkAnswer(3)"></button>
+    </div>
+
+    <!-- Feedback -->
+    <div id="feedback"></div>
+
+    <!-- Next Button -->
+    <button id="next-btn" onclick="nextQuestion()">Next Question →</button>
+
+  </div>
+
+  <!-- RESULTS -->
+  <div id="results-container">
+    <h2>🎨 Game Over!</h2>
+    <div id="final-score"></div>
+    <div id="result-message"></div>
+    <button id="restart-btn" onclick="restartGame()">Play Again</button>
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <p>&copy; 2026 HERart - Celebrating Women in Art</p>
+    <a href="index.html">Home</a> |
+    <a href="scratch.html">Scratch Page</a> |
+    <a href="gallery.html">Gallery</a>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        clue: "I was born in Bologna, Italy in 1552. I became one of the first professional female artists in Western history and the first woman to paint large-scale public commissions.",
+        answers: ["Lavinia Fontana", "Artemisia Gentileschi", "Sofonisba Anguissola", "Barbara Longhi"],
+        correct: 0
+      },
+      {
+        clue: "I was an American Impressionist painter who moved to Paris and was the only American — and one of the few women — accepted into the French Impressionist group. I loved painting mothers and children.",
+        answers: ["Berthe Morisot", "Mary Cassatt", "Rosa Bonheur", "Camille Claudel"],
+        correct: 1
+      },
+      {
+        clue: "I was a Mexican painter known for my deeply personal self-portraits. I suffered a terrible accident at 18 and used painting to process my pain. I am considered an icon of identity and resilience.",
+        answers: ["Remedios Varo", "Frida Kahlo", "Leonora Carrington", "Maria Izquierdo"],
+        correct: 1
+      },
+      {
+        clue: "I am an American contemporary artist working in photography, video, and installation. My work addresses race, gender, and class. My most famous series features a woman alone at a kitchen table.",
+        answers: ["Kara Walker", "Carrie Mae Weems", "Faith Ringgold", "Lorna Simpson"],
+        correct: 1
+      },
+      {
+        clue: "I was a Renaissance sculptor and painter, one of the first known women artists in Western art. I was also a close friend and correspondent of Michelangelo.",
+        answers: ["Lavinia Fontana", "Barbara Longhi", "Sofonisba Anguissola", "Properzia de' Rossi"],
+        correct: 2
+      },
+      {
+        clue: "I was a French Impressionist and the only major female painter in the core Impressionist group. I was the sister-in-law of Édouard Manet and known for my delicate brushwork.",
+        answers: ["Mary Cassatt", "Berthe Morisot", "Eva Gonzalès", "Marie Bracquemond"],
+        correct: 1
+      },
+      {
+        clue: "I was an Italian Baroque painter famous for depicting strong heroic women from the Bible. I was one of the first women to achieve recognition in the male-dominated world of 17th century art.",
+        answers: ["Lavinia Fontana", "Sofonisba Anguissola", "Artemisia Gentileschi", "Barbara Longhi"],
+        correct: 2
+      },
+      {
+        clue: "I am a contemporary American artist known for large-scale silhouette works exploring the history of slavery and racism in America. I was awarded a MacArthur Fellowship in 1997.",
+        answers: ["Carrie Mae Weems", "Faith Ringgold", "Kara Walker", "Lorna Simpson"],
+        correct: 2
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    let answered = false;
+
+    function loadQuestion() {
+      const q = questions[currentQuestion];
+      document.getElementById("clue-text").textContent = q.clue;
+      document.getElementById("clue-number").textContent = "Clue " + (currentQuestion + 1) + " of " + questions.length;
+      document.getElementById("q-number").textContent = currentQuestion + 1;
+      document.getElementById("feedback").textContent = "";
+      document.getElementById("next-btn").style.display = "none";
+
+      const buttons = document.querySelectorAll(".answer-btn");
+      buttons.forEach((btn, i) => {
+        btn.textContent = q.answers[i];
+        btn.className = "answer-btn";
+        btn.disabled = false;
+      });
+
+      answered = false;
+    }
+
+    function checkAnswer(index) {
+      if (answered) return;
+      answered = true;
+
+      const q = questions[currentQuestion];
+      const buttons = document.querySelectorAll(".answer-btn");
+
+      buttons.forEach(btn => btn.disabled = true);
+      buttons[q.correct].classList.add("correct");
+
+      if (index === q.correct) {
+        score++;
+        document.getElementById("score").textContent = score;
+        document.getElementById("feedback").textContent = "✅ Correct! Well done!";
+        document.getElementById("feedback").style.color = "#4caf50";
+      } else {
+        buttons[index].classList.add("wrong");
+        document.getElementById("feedback").textContent = "❌ Not quite! The correct answer was " + q.answers[q.correct] + ".";
+        document.getElementById("feedback").style.color = "#e57373";
+      }
+
+      document.getElementById("next-btn").style.display = "inline-block";
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function showResults() {
+      document.getElementById("game-container").style.display = "none";
+      document.getElementById("results-container").style.display = "block";
+      document.getElementById("final-score").textContent = "You scored " + score + " out of " + questions.length + "!";
+
+      let message = "";
+      if (score === questions.length) {
+        message = "🌟 Perfect score! You are a true HERart expert! Women artists everywhere are proud of you.";
+      } else if (score >= 6) {
+        message = "🎨 Amazing! You know your women artists really well. Keep celebrating their legacy!";
+      } else if (score >= 4) {
+        message = "👏 Great effort! You have a solid knowledge of women in art. Keep exploring HERart to learn more!";
+      } else {
+        message = "🌸 Good try! There is so much to discover about women artists throughout history. Explore our gallery to learn more!";
+      }
+
+      document.getElementById("result-message").textContent = message;
+    }
+
+    function restartGame() {
+      currentQuestion = 0;
+      score = 0;
+      document.getElementById("score").textContent = 0;
+      document.getElementById("results-container").style.display = "none";
+      document.getElementById("game-container").style.display = "block";
+      loadQuestion();
+    }
+
+    // Start the game
+    loadQuestion();
+  </script>
+
+</body>
+</html>
