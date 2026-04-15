@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERart - Guess the Artist</title>
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Georgia, serif;
+      background-color: #fff8f5;
+      color: #3b2a2a;
+    }
+
+    /* Navbar */
+    #navbar {
+      background-color: #6b2737;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    #navbar a {
+      color: #f2c4ce;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1em;
+    }
+
+    #navbar a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* Hero */
+    #hero {
+      background-color: #6b2737;
+      color: #f2c4ce;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    #hero h1 {
+      font-size: 2.5em;
+      letter-spacing: 4px;
+      margin-bottom: 5px;
+      color: #f2c4ce;
+    }
+
+    #hero p {
+      font-style: italic;
+      font-size: 1.1em;
+      color: #fff8f5;
+    }
+
+    /* Game Container */
+    #game-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border: 1px solid #f2c4ce;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    #score-board {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    #score-board span {
+      background-color: #fff0f3;
+      border: 1px solid #f2c4ce;
+      border-radius: 6px;
+      padding: 8px 20px;
+      color: #6b2737;
+      font-weight: bold;
+    }
+
+    #clue-box {
+      background-color: #fff0f3;
+      border: 1px solid #f2c4ce;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    #clue-number {
+      font-size: 0.9em;
+      color: #a04455;
+      margin-bottom: 8px;
+    }
+
+    #clue-text {
+      font-size: 1.2em;
+      color: #3b2a2a;
+      line-height: 1.6;
+    }
+
+    /* Answer Buttons */
+    #answers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .answer-btn {
+      background-color: #fff0f3;
+      border: 2px solid #f2c4ce;
+      border-radius: 6px;
+      padding: 14px;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      color: #3b2a2a;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .answer-btn:hover {
+      background-color: #6b2737;
+      color: #ffffff;
+      border-color: #6b2737;
+    }
+
+    .answer-btn.correct {
+      background-color: #4caf50;
+      color: white;
+      border-color: #4caf50;
+    }
+
+    .answer-btn.wrong {
+      background-color: #e57373;
+      color: white;
+      border-color: #e57373;
+    }
+
+    /* Feedback */
+    #feedback {
+      font-size: 1.1em;
+      font-weight: bold;
+      min-height: 30px;
+      margin-bottom: 15px;
+      color: #6b2737;
+    }
+
+    /* Next Button */
+    #next-btn {
+      background-color: #6b2737;
+      color: #f2c4ce;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 30px;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      cursor: pointer;
+      display: none;
+    }
+
+    #next-btn:hover {
+      background-color: #a04455;
+    }
+
+    /* Results Screen */
+    #results-container {
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      border: 1px solid #f2c4ce;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+
+    #results-container h2 {
+      color: #6b2737;
+      font-size: 2em;
+    }
+
+    #final-score {
+      font-size: 1.5em;
+      color: #a04455;
+      margin: 15px 0;
+    }
+
+    #result-message {
+      font-size: 1.1em;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    #restart-btn {
+      background-color: #6b2737;
+      color: #f2c4ce;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 30px;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #restart-btn:hover {
+      background-color: #a04455;
+    }
+
+    /* Footer */
+    #footer {
+      background-color: #6b2737;
+      color: #f2c4ce;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-family: Georgia, serif;
+    }
+
+    #footer a {
+      color: #f2c4ce;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    #footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="resume.html">Résumé</a>
+    <a href="contact.html">Contact</a>
+    <a href="scratch.html">Scratch Page</a>
+  </div>
+
+  <!-- HERO -->
+  <div id="hero">
+    <h1>Guess the Artist 🎨</h1>
+    <p>Test your knowledge of famous women artists throughout history!</p>
+  </div>
+
+  <!-- GAME -->
+  <div id="game-container">
+
+    <!-- Score Board -->
+    <div id="score-board">
+      <span>Question: <span id="q-number">1</span> / 8</span>
+      <span>Score: <span id="score">0</span></span>
+    </div>
+
+    <!-- Clue Box -->
+    <div id="clue-box">
+      <div id="clue-number">Clue</div>
+      <div id="clue-text"></div>
+    </div>
+
+    <!-- Answer Buttons -->
+    <div id="answers">
+      <button class="answer-btn" onclick="checkAnswer(0)"></button>
+      <button class="answer-btn" onclick="checkAnswer(1)"></button>
+      <button class="answer-btn" onclick="checkAnswer(2)"></button>
+      <button class="answer-btn" onclick=
