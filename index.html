@@ -5,105 +5,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HERart - Celebrating Women in Art</title>
-  <!-- Link to external stylesheet (CSS Chapter: Moving to External Stylesheet) -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- =====================
-       HEADER / NAV
-       (CSS Chapter: Fixed Positioning)
-  ===================== -->
-  <header id="top">
-    <h1>HERart</h1>
-    <p>Celebrating Women in Art</p>
+  <!-- NAVBAR (Bootstrap Component) -->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #6b2737;">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="index.html">HERart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="resume.html">Résumé</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation with folder structure links (HTML Chapter: Navigating Folder Structure) -->
-    <nav>
-      <a href="index.html" title="Go to Home Page">Home</a>
-      <a href="gallery.html" title="View the Artist Gallery">Gallery</a>
-      <a href="contact.html" title="Contact Us">Contact</a>
-    </nav>
-  </header>
+  <!-- HERO SECTION -->
+  <div class="container-fluid py-5 text-white text-center" style="background-color: #6b2737; margin-top: 56px;">
+    <div class="container">
+      <h1 class="display-3 fw-bold" style="color: #f2c4ce; letter-spacing: 4px;">HERart</h1>
+      <p class="lead" style="color: #f2c4ce;">Celebrating Women in Art</p>
+      <a href="gallery.html" class="btn btn-light mt-3" style="color: #6b2737; font-weight: bold;">Explore the Gallery</a>
+    </div>
+  </div>
 
-  <!-- =====================
-       MAIN CONTENT
-  ===================== -->
-  <main>
+  <!-- MAIN CONTENT -->
+  <div class="container my-5" id="top">
 
-    <!-- On-page anchor target (HTML Chapter: On-page anchors) -->
-    <section id="mission">
-      <h2>Our Mission</h2>
+    <!-- MISSION -->
+    <div class="row align-items-center mb-5" id="mission">
+      <div class="col-md-6">
+        <h2 style="color: #6b2737;">Our Mission</h2>
+        <p>
+          <strong>HERart</strong> is a digital platform dedicated to honoring the contributions
+          of women artists — both historical and contemporary.<br />
+          We exist to challenge gender biases in the art world and celebrate the
+          <em>resilience, creativity, and vision</em> of women throughout history.
+        </p>
+      </div>
+      <div class="col-md-6 text-center">
+        <img src="images/frontpageart.jpg" alt="Artwork representing women in art"
+          class="img-fluid rounded" style="border: 3px solid #f2c4ce; max-height: 300px;" />
+      </div>
+    </div>
 
-      <!-- img with src, height, width, alt attributes (HTML Chapter: img, attributes) -->
-      <img
-        src="images/frontpageart.jpg"
-        alt="Artwork representing women in art"
-        width="300"
-        height="300"
-      />
+    <!-- WHAT WE OFFER -->
+    <div class="row mb-5" id="what-we-offer">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">What We Offer</h2>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">🎨 Curated profiles of historical women artists</li>
+          <li class="list-group-item">🖼️ A gallery showcasing contemporary female artists</li>
+          <li class="list-group-item">📚 An educational hub with articles and resources</li>
+          <li class="list-group-item">🤝 A space for community engagement and discussion</li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- br for line breaks, strong and em for nesting inline elements -->
-      <p>
-        <strong>HERart</strong> is a digital platform dedicated to honoring the contributions
-        of women artists — both historical and contemporary.<br />
-        We exist to challenge gender biases in the art world and celebrate the
-        <em>resilience, creativity, and vision</em> of women throughout history.
-      </p>
-    </section>
+    <!-- ARTISTS WE CELEBRATE -->
+    <div class="row mb-5" id="artists">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">Artists We Celebrate</h2>
+        <p>From the Renaissance to today, HERart weaves a diverse and inclusive tapestry:</p>
+        <ol>
+          <li>Lavinia Fontana – Renaissance Pioneer</li>
+          <li>Mary Cassatt – Impressionist Storyteller</li>
+          <li>Frida Kahlo – Icon of Identity</li>
+          <li>Carrie Mae Weems – Contemporary Voice</li>
+        </ol>
+      </div>
+    </div>
 
-    <section id="what-we-offer">
-      <h2>What We Offer</h2>
+    <!-- CARDS SECTION -->
+    <div class="row mb-5" id="inspiration">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">Inspired by the Guerrilla Girls</h2>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100" style="border-color: #f2c4ce;">
+          <div class="card-body">
+            <h5 class="card-title" style="color: #6b2737;">Historical Artists</h5>
+            <p class="card-text">Discover the women who paved the way in art history, from the Renaissance to Impressionism.</p>
+            <a href="gallery.html" class="btn btn-sm" style="background-color: #6b2737; color: white;">View Artists</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100" style="border-color: #f2c4ce;">
+          <div class="card-body">
+            <h5 class="card-title" style="color: #6b2737;">Contemporary Voices</h5>
+            <p class="card-text">Explore the work of modern female artists who are shaping today's art world.</p>
+            <a href="gallery.html" class="btn btn-sm" style="background-color: #6b2737; color: white;">Explore</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100" style="border-color: #f2c4ce;">
+          <div class="card-body">
+            <h5 class="card-title" style="color: #6b2737;">Join the Community</h5>
+            <p class="card-text">Submit your artwork, explore resources, and connect with others who celebrate women in art.</p>
+            <a href="contact.html" class="btn btn-sm" style="background-color: #6b2737; color: white;">Get Involved</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      <!-- Unordered list (HTML Chapter: ol, ul, li) -->
-      <ul>
-        <li>Curated profiles of historical women artists</li>
-        <li>A gallery showcasing contemporary female artists</li>
-        <li>An educational hub with articles and resources</li>
-        <li>A space for community engagement and discussion</li>
-      </ul>
-    </section>
+  </div>
 
-    <section id="artists">
-      <h2>Artists We Celebrate</h2>
-      <p>From the Renaissance to today, HERart weaves a diverse and inclusive tapestry:</p>
-
-      <!-- Ordered list (HTML Chapter: ol, ul, li) -->
-      <ol>
-        <li>Lavinia Fontana – Renaissance Pioneer</li>
-        <li>Mary Cassatt – Impressionist Storyteller</li>
-        <li>Frida Kahlo – Icon of Identity</li>
-        <li>Carrie Mae Weems – Contemporary Voice</li>
-      </ol>
-    </section>
-
-    <section id="inspiration">
-      <h2>Inspired by the Guerrilla Girls</h2>
-      <p>
-        Taking inspiration from the <strong>Guerrilla Girls</strong>, HERart challenges norms
-        and seeks to redefine the narrative surrounding women in art.<br />
-        This is not just an observation of art — it is a <em>reframing of history.</em>
-      </p>
-
-      <!-- Anchor link with href and title (HTML Chapter: a, anchor, link, href, title) -->
-      <a href="gallery.html" title="Visit the HERart Gallery">Explore the Gallery &rarr;</a>
-
-      <!-- On-page anchor link back to top (HTML Chapter: On-page anchors) -->
-      <br /><br />
-      <a href="#top" title="Back to top of page">&#8593; Back to Top</a>
-    </section>
-
-  </main>
-
-  <!-- =====================
-       FOOTER
-  ===================== -->
-  <footer>
-    <p>&copy; 2026 HERart - Celebrating Women in Art</p>
-    <a href="gallery.html" title="Go to Gallery">Gallery</a> |
-    <a href="contact.html" title="Go to Contact">Contact</a>
+  <!-- FOOTER -->
+  <footer class="text-center py-4" style="background-color: #6b2737; color: #f2c4ce;">
+    <p class="mb-1">&copy; 2026 HERart - Celebrating Women in Art</p>
+    <a href="gallery.html" class="text-white mx-2">Gallery</a> |
+    <a href="resume.html" class="text-white mx-2">Résumé</a> |
+    <a href="contact.html" class="text-white mx-2">Contact</a>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
