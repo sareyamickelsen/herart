@@ -5,134 +5,150 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HERart - Contact Us</title>
-  <!-- Link to external stylesheet -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header id="top">
-    <h1>HERart</h1>
-    <p>Celebrating Women in Art</p>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #6b2737;">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold" href="index.html">HERart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="resume.html">Résumé</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav>
-      <a href="index.html" title="Go to Home Page">Home</a>
-      <a href="gallery.html" title="View the Artist Gallery">Gallery</a>
-      <a href="contact.html" title="Contact Us">Contact</a>
-    </nav>
-  </header>
+  <!-- PAGE HEADER -->
+  <div class="container-fluid py-4 text-center text-white" style="background-color: #6b2737; margin-top: 56px;">
+    <h1 class="display-5 fw-bold" style="color: #f2c4ce;">Get In Touch</h1>
+    <p class="lead" style="color: #f2c4ce;">Join the HERart Community</p>
+  </div>
 
   <!-- MAIN CONTENT -->
-  <main>
+  <div class="container my-5" id="top">
 
-    <section id="contact-intro">
-      <h2>Get In Touch</h2>
-      <p>
-        We would love to hear from you! Whether you are a <strong>female artist</strong>
-        looking to showcase your work, a <em>researcher</em> passionate about women in art,
-        or simply someone who appreciates the beauty of art — this community is for you.
-      </p>
-
-      <img
-        src="images/contactpage.jpg"
-        alt="A welcoming community space for women in art"
-        width="400"
-        height="300"
-      />
-    </section>
-
-    <!-- On-page anchor jump links -->
-    <section id="contact-links">
-      <h2>What Would You Like to Do?</h2>
-      <ul>
-        <li><a href="#submit-art" title="Submit your artwork">Submit Your Artwork</a></li>
-        <li><a href="#resources" title="View educational resources">Explore Resources</a></li>
-        <li><a href="#connect" title="Connect with the community">Connect With Us</a></li>
-      </ul>
-    </section>
+    <!-- INTRO -->
+    <div class="row align-items-center mb-5" id="contact-intro">
+      <div class="col-md-7">
+        <p>
+          We would love to hear from you! Whether you are a <strong>female artist</strong>
+          looking to showcase your work, a <em>researcher</em> passionate about women in art,
+          or simply someone who appreciates the beauty of art — this community is for you.
+        </p>
+        <p>Jump to a section:</p>
+        <ul>
+          <li><a href="#submit-art" style="color: #6b2737;">Submit Your Artwork</a></li>
+          <li><a href="#resources" style="color: #6b2737;">Explore Resources</a></li>
+          <li><a href="#connect" style="color: #6b2737;">Connect With Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="images/contactpage.jpg" alt="HERart Community"
+          class="img-fluid rounded" style="border: 3px solid #f2c4ce; max-height: 300px;" />
+      </div>
+    </div>
 
     <!-- SUBMIT ART -->
-    <section id="submit-art">
-      <h2>Submit Your Artwork</h2>
-      <p>
-        Are you a current or emerging female artist?<br />
-        We want to feature <em>your</em> work on HERart!
-      </p>
-      <p>
-        To submit your artwork, please email us at:<br />
-        <strong>submit@herart.com</strong>
-      </p>
-
-      <h3>What to Include in Your Submission</h3>
-      <ol>
-        <li>Your full name and artist biography</li>
-        <li>High resolution images of your artwork</li>
-        <li>Title and description of each piece</li>
-        <li>Links to your personal website or social media</li>
-      </ol>
-
-      <a href="#top" title="Back to top">&#8593; Back to Top</a>
-    </section>
+    <div class="row mb-5 p-4 rounded" id="submit-art" style="background-color: #fff0f3; border: 1px solid #f2c4ce;">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">Submit Your Artwork</h2>
+        <p>
+          Are you a current or emerging female artist?<br />
+          We want to feature <em>your</em> work on HERart!
+        </p>
+        <p>To submit your artwork, please email us at: <strong>submit@herart.com</strong></p>
+        <h5 style="color: #a04455;">What to Include in Your Submission</h5>
+        <ol>
+          <li>Your full name and artist biography</li>
+          <li>High resolution images of your artwork</li>
+          <li>Title and description of each piece</li>
+          <li>Links to your personal website or social media</li>
+        </ol>
+        <a href="#top" style="color: #6b2737;">&#8593; Back to Top</a>
+      </div>
+    </div>
 
     <!-- RESOURCES -->
-    <section id="resources">
-      <h2>Educational Resources</h2>
-      <p>
-        Explore these external resources to learn more about
-        <strong>women in art history</strong>:
-      </p>
-
-      <ul>
-        <li>
-          <a href="https://www.guerrillagirls.com" title="Visit the Guerrilla Girls website" target="_blank">
-            Guerrilla Girls
-          </a>
-          – Activists fighting gender bias in the art world
-        </li>
-        <li>
-          <a href="https://www.metmuseum.org" title="Visit the Met Museum website" target="_blank">
-            The Metropolitan Museum of Art
-          </a>
-          – Explore women artists throughout history
-        </li>
-        <li>
-          <a href="https://www.moma.org" title="Visit MoMA website" target="_blank">
-            MoMA
-          </a>
-          – Modern and contemporary women artists
-        </li>
-      </ul>
-
-      <a href="#top" title="Back to top">&#8593; Back to Top</a>
-    </section>
+    <div class="row mb-5 p-4 rounded" id="resources" style="background-color: #fff0f3; border: 1px solid #f2c4ce;">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">Educational Resources</h2>
+        <p>Explore these external resources to learn more about <strong>women in art history</strong>:</p>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card h-100" style="border-color: #f2c4ce;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #6b2737;">Guerrilla Girls</h5>
+                <p class="card-text">Activists fighting gender bias in the art world.</p>
+                <a href="https://www.guerrillagirls.com" target="_blank" class="btn btn-sm" style="background-color: #6b2737; color: white;">Visit Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100" style="border-color: #f2c4ce;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #6b2737;">The Met Museum</h5>
+                <p class="card-text">Explore women artists throughout history.</p>
+                <a href="https://www.metmuseum.org" target="_blank" class="btn btn-sm" style="background-color: #6b2737; color: white;">Visit Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100" style="border-color: #f2c4ce;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: #6b2737;">MoMA</h5>
+                <p class="card-text">Modern and contemporary women artists.</p>
+                <a href="https://www.moma.org" target="_blank" class="btn btn-sm" style="background-color: #6b2737; color: white;">Visit Site</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <a href="#top" style="color: #6b2737;">&#8593; Back to Top</a>
+      </div>
+    </div>
 
     <!-- CONNECT -->
-    <section id="connect">
-      <h2>Connect With Us</h2>
-      <p>
-        Follow HERart on social media to stay up to date on new artist features,<br />
-        events, and community discussions.
-      </p>
+    <div class="row mb-5 p-4 rounded" id="connect" style="background-color: #fff0f3; border: 1px solid #f2c4ce;">
+      <div class="col-12">
+        <h2 style="color: #6b2737;">Connect With Us</h2>
+        <p>
+          Follow HERart on social media to stay up to date on new artist features,<br />
+          events, and community discussions.
+        </p>
+        <ul>
+          <li>Instagram: <strong>@HERart</strong></li>
+          <li>Twitter/X: <strong>@HERartOfficial</strong></li>
+          <li>Email: <strong>hello@herart.com</strong></li>
+        </ul>
+        <a href="#top" style="color: #6b2737;">&#8593; Back to Top</a>
+      </div>
+    </div>
 
-      <ul>
-        <li>Instagram: <strong>@HERart</strong></li>
-        <li>Twitter/X: <strong>@HERartOfficial</strong></li>
-        <li>Email: <strong>hello@herart.com</strong></li>
-      </ul>
-
-      <a href="#top" title="Back to top">&#8593; Back to Top</a>
-    </section>
-
-  </main>
+  </div>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2026 HERart - Celebrating Women in Art</p>
-    <a href="index.html" title="Go to Home">Home</a> |
-    <a href="gallery.html" title="Go to Gallery">Gallery</a>
+  <footer class="text-center py-4" style="background-color: #6b2737; color: #f2c4ce;">
+    <p class="mb-1">&copy; 2026 HERart - Celebrating Women in Art</p>
+    <a href="index.html" class="text-white mx-2">Home</a> |
+    <a href="gallery.html" class="text-white mx-2">Gallery</a> |
+    <a href="resume.html" class="text-white mx-2">Résumé</a>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
