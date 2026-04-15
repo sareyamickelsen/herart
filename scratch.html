@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HERart - From Scratch</title>
+  <!-- Custom Scratch Stylesheet -->
+  <link rel="stylesheet" href="scratch.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION back to main pages -->
+  <div id="navbar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="resume.html">Résumé</a>
+    <a href="contact.html">Contact</a>
+    <a href="webapp.html">Web App</a>
+  </div>
+
+  <!-- HERO DIV -->
+  <div id="hero">
+    <h1>HERart</h1>
+    <p>A Celebration of Women in Art — Built From Scratch</p>
+    <!-- On-page anchor link -->
+    <a href="#about">Discover More ↓</a>
+  </div>
+
+  <!-- ABOUT DIV -->
+  <!-- On-page anchor target -->
+  <div id="about">
+    <h2>About HERart</h2>
+    <p>
+      HERart is a passion project dedicated to recognizing the women who shaped art history.
+      From the Renaissance to today, women artists have broken barriers, challenged norms,
+      and created works of extraordinary beauty and meaning.
+    </p>
+
+    <!-- Image not from Bootstrap theme -->
+    <img
+      src="images/frontpageart.jpg"
+      alt="Artwork representing women in art"
+      width="300"
+      height="300"
+    />
+
+    <p>
+      This page was built entirely from scratch using HTML and CSS —
+      no Bootstrap, no templates. Just creativity and code.
+    </p>
+
+    <!-- Back to top anchor -->
+    <a href="#top">↑ Back to Top</a>
+  </div>
+
+  <!-- CONTENT DIV -->
+  <div id="content">
+
+    <h2>Why Women in Art Matter</h2>
+
+    <!-- Ordered list with embedded unordered list (required nested list) -->
+    <ol>
+      <li>
+        Historical Impact
+        <ul>
+          <li>Women have created art for thousands of years</li>
+          <li>Many were excluded from formal art training</li>
+          <li>Their work was often attributed to male artists</li>
+        </ul>
+      </li>
+      <li>
+        Breaking Barriers
+        <ul>
+          <li>Lavinia Fontana was the first woman to paint public commissions</li>
+          <li>Mary Cassatt was the only American in the French Impressionist group</li>
+          <li>Frida Kahlo turned personal pain into universal art</li>
+        </ul>
+      </li>
+      <li>
+        Contemporary Voices
+        <ul>
+          <li>Carrie Mae Weems addresses race and gender through photography</li>
+          <li>Female artists today are redefining the art world</li>
+          <li>HERart exists to amplify these voices</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Embedded YouTube Video (required element) -->
+    <h2>Featured Video</h2>
+    <p>Carrie Mae Weems: "The Kitchen Table Series" | Art21</p>
+    <div id="video-container">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/pPDInpNoO50"
+        title="Carrie Mae Weems - The Kitchen Table Series"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Tableau Interactive Graph (required element) -->
+    <h2>170 Women in the Arts — Interactive Data</h2>
+    <p>Explore this interactive Tableau visualization celebrating 170 women who shaped the arts:</p>
+
+    <div id="tableau-container">
+      <div class='tableauPlaceholder' id='viz1776233251787' style='position: relative'>
+        <noscript>
+          <a href='#'>
+            <img alt='Sheet 6' src='https://public.tableau.com/static/images/17/170WomenintheArts/Sheet6/1_rss.png' style='border: none' />
+          </a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='site_root' value='' />
+          <param name='name' value='170WomenintheArts/Sheet6' />
+          <param name='tabs' value='no' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/17/170WomenintheArts/Sheet6/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+        </object>
+      </div>
+      <script type='text/javascript'>
+        var divElement = document.getElementById('viz1776233251787');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+      </script>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <p>&copy; 2026 HERart - Celebrating Women in Art</p>
+    <a href="index.html">Home</a> |
+    <a href="gallery.html">Gallery</a> |
+    <a href="webapp.html">Web App</a>
+  </div>
+
+</body>
+</html>
