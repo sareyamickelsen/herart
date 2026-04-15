@@ -1,0 +1,193 @@
+/* =====================
+   HERart Scratch Stylesheet
+   Custom styles - no Bootstrap
+   ===================== */
+
+/* Font color and font family styles (required) */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #3b2a2a;
+  /* Custom background color (required) */
+  background-color: #fff8f5;
+}
+
+/* =====================
+   NAVBAR DIV
+   ===================== */
+#navbar {
+  background-color: #6b2737;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+#navbar a {
+  color: #f2c4ce;
+  text-decoration: none;
+  margin-right: 20px;
+  font-family: Georgia, serif;
+  font-size: 1em;
+}
+
+#navbar a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* =====================
+   HERO DIV
+   Positioning and styling (required divs)
+   ===================== */
+#hero {
+  background-color: #6b2737;
+  color: #f2c4ce;
+  text-align: center;
+  padding: 100px 20px 60px 20px;
+  margin-top: 50px;
+}
+
+#hero h1 {
+  font-family: Georgia, serif;
+  font-size: 4em;
+  letter-spacing: 6px;
+  color: #f2c4ce;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 1.3em;
+  font-style: italic;
+  color: #fff8f5;
+}
+
+#hero a {
+  display: inline-block;
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 1.1em;
+  text-decoration: none;
+  border: 2px solid #f2c4ce;
+  padding: 10px 25px;
+  border-radius: 4px;
+}
+
+#hero a:hover {
+  background-color: #f2c4ce;
+  color: #6b2737;
+}
+
+/* =====================
+   ABOUT DIV
+   ===================== */
+#about {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #f2c4ce;
+  border-radius: 8px;
+}
+
+#about h2 {
+  font-family: Georgia, serif;
+  color: #6b2737;
+  border-bottom: 2px solid #f2c4ce;
+  padding-bottom: 8px;
+}
+
+#about img {
+  float: left;
+  margin: 0 20px 15px 0;
+  border: 3px solid #f2c4ce;
+  border-radius: 6px;
+}
+
+#about a {
+  color: #6b2737;
+  display: block;
+  margin-top: 15px;
+  clear: both;
+}
+
+/* =====================
+   CONTENT DIV
+   ===================== */
+#content {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #f2c4ce;
+  border-radius: 8px;
+}
+
+#content h2 {
+  font-family: Georgia, serif;
+  color: #6b2737;
+  border-bottom: 2px solid #f2c4ce;
+  padding-bottom: 8px;
+  margin-top: 30px;
+}
+
+#content ol {
+  line-height: 2;
+  color: #3b2a2a;
+}
+
+#content ul {
+  color: #6b2737;
+  line-height: 1.8;
+}
+
+/* =====================
+   VIDEO CONTAINER DIV
+   ===================== */
+#video-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+#video-container iframe {
+  max-width: 100%;
+  border: 3px solid #f2c4ce;
+  border-radius: 6px;
+}
+
+/* =====================
+   TABLEAU CONTAINER
+   ===================== */
+#tableau-container {
+  margin: 20px 0;
+  border: 3px solid #f2c4ce;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* =====================
+   FOOTER DIV
+   ===================== */
+#footer {
+  background-color: #6b2737;
+  color: #f2c4ce;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-family: Georgia, serif;
+}
+
+#footer a {
+  color: #f2c4ce;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
