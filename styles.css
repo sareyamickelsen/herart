@@ -1,0 +1,195 @@
+/* =====================
+   HERart - External Stylesheet
+   CSS Chapter: Moving to External Stylesheet
+   ===================== */
+
+/* =====================
+   Base Reset
+   CSS Chapter: Overwriting HTML Element Styles
+   ===================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Georgia, serif;
+  background-color: #fff8f5;
+  color: #3b2a2a;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+}
+
+/* =====================
+   HEADER
+   CSS Chapter: Fixed Positioning
+   ===================== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #6b2737;
+  color: #fff8f5;
+  padding: 15px 30px;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  letter-spacing: 3px;
+  color: #f2c4ce;
+}
+
+header p {
+  margin: 2px 0 10px 0;
+  font-style: italic;
+  color: #f2c4ce;
+}
+
+/* =====================
+   NAVIGATION
+   CSS Chapter: Link State Styling
+   ===================== */
+nav a {
+  color: #fff8f5;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1em;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #f2c4ce;
+  color: #6b2737;
+  text-decoration: underline;
+}
+
+nav a:visited {
+  color: #f9dde2;
+}
+
+/* =====================
+   MAIN CONTENT
+   CSS Chapter: Box Model - margin, padding
+   ===================== */
+main {
+  margin-top: 120px;
+  padding: 20px 60px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =====================
+   SECTIONS
+   CSS Chapter: Background, Align, Box Model
+   ===================== */
+section {
+  margin-bottom: 50px;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e8c4cc;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+h2 {
+  color: #6b2737;
+  border-bottom: 2px solid #f2c4ce;
+  padding-bottom: 8px;
+}
+
+h3 {
+  color: #a04455;
+}
+
+/* =====================
+   IMAGES
+   CSS Chapter: Float
+   ===================== */
+img {
+  float: left;
+  margin: 0 20px 15px 0;
+  border: 3px solid #f2c4ce;
+  border-radius: 6px;
+}
+
+/* Clear float after sections */
+section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* =====================
+   LINKS
+   CSS Chapter: Link State Styling
+   ===================== */
+a {
+  color: #6b2737;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #a04455;
+}
+
+a:visited {
+  color: #9b6b75;
+}
+
+/* =====================
+   SPAN
+   CSS Chapter: Within-local-tag Style and Span
+   ===================== */
+span.highlight {
+  background-color: #f2c4ce;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+/* =====================
+   LISTS
+   CSS Chapter: Custom Style Selectors
+   ===================== */
+ul, ol {
+  padding-left: 25px;
+  line-height: 1.9;
+}
+
+ul li {
+  list-style-type: square;
+  color: #6b2737;
+}
+
+ol li {
+  color: #3b2a2a;
+}
+
+/* =====================
+   FOOTER
+   CSS Chapter: Background, Align
+   ===================== */
+footer {
+  background-color: #6b2737;
+  color: #f2c4ce;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
+}
+
+footer a {
+  color: #f2c4ce;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
